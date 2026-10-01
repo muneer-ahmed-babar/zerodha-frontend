@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -10,7 +10,7 @@ function Navbar() {
       <div className="container p-2">
         <Link className="navbar-brand" to="/">
           <img
-            src="media/images/logo.svg"
+            src="/media/images/logo.svg"
             style={{ width: "25%" }}
             alt="Logo"
           />
@@ -27,35 +27,35 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="d-flex" role="search">
+          <div className="d-flex">
             <ul className="navbar-nav mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/signup">
+                <NavLink className="nav-link" to="/signup">
                   Signup
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/about">
+                <NavLink className="nav-link" to="/about">
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/product">
+                <NavLink className="nav-link" to="/product">
                   Product
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/pricing">
+                <NavLink className="nav-link" to="/pricing">
                   Pricing
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/support">
+                <NavLink className="nav-link" to="/support">
                   Support
-                </Link>
+                </NavLink>
               </li>
             </ul>
-          </form>
+          </div>
         </div>
       </div>
     </nav>
